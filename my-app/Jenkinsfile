@@ -17,14 +17,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Clean and build the project using Maven
-                sh 'mvn -f my-app/pom.xml clean install'
+                bat 'mvn -f my-app/pom.xml clean install'
             }
         }
 
         stage('Test') {
             steps {
                 // Run the tests using Maven (assuming you have tests configured)
-                sh 'mvn -f my-app/pom.xml test'
+                bat 'mvn -f my-app/pom.xml test'
             }
         }
 
